@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+```erb
+<%= form_for @todo do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+<% end %>
+```
