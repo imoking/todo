@@ -1,5 +1,6 @@
+<h2>投稿する</h2>
 <%= form_for @todo do |f| %>
-    <%= f.label :content %>
-    <%= f.text_field :content%>
+    <%= f.label :content,"内容を記載" %> <br>
+    <%= f.text_field :content %> <br>
     <%= f.submit '送信' %>
 <% end %>

@@ -14,11 +14,15 @@ class TodosController < ApplicationController
   
   
   def create
-    @todo = Todo.new(content: params.require(:todo))
+    @todo = Todo.new(todo_params)
     @todo.save
     redirect_to('/')
   end
   
   def update
+  end
+  
+  def todo_params
+    params.require(:todo).permit(:content)
   end
 end

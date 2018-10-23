@@ -1,6 +1,8 @@
-<h1>Todos#index</h1>
+<h2>一覧</h2>
 <ul>
     <% @todos.each do |todo| %>
-    <li><%= todo.id %>: <%= link_to(todo.content, "/todos/#{todo.id}/show") %></li>
+    <li><%= todo.id %>: <%= link_to(todo.content, "/todos/#{todo.id}/show") %> <br>
+        <%= todo.created_at %>
+    </li>
     <% end %>
 </ul>
