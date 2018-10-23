@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   get '/' => "todos#index"
-  get 'todos/detile' => 'todos#detile'
   get 'todos/new' => 'todos#new'
-  get 'todos/show' => 'todos#show'
+  get 'todos/:id/show' => 'todos#show'
   # resources 'todos'
   post 'todos/' => 'todos#create'
   post 'todos/:id' => 'todos#update'

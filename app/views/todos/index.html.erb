@@ -1,6 +1,6 @@
 <h1>Todos#index</h1>
 <ul>
     <% @todos.each do |todo| %>
-    <li><%= link_to(todo.content,'/todos/detile') %></li>
+    <li><%= todo.id %>: <%= link_to(todo.content, "/todos/#{todo.id}/show") %></li>
     <% end %>
 </ul>
