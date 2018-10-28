@@ -7,22 +7,23 @@ class TodosController < ApplicationController
   def show
     @todo = Todo.find_by(id: params[:id])
   end
-  
+
   def new
     @todo = Todo.new
   end
-  
-  
+
+
   def create
     @todo = Todo.new(todo_params)
     @todo.save
     redirect_to('/')
   end
-  
+
   def update
   end
-  
-  def todo_params
-    params.require(:todo).permit(:content)
-  end
+
+  private
+    def todo_params
+      params.require(:todo).permit(:content)
+    end
 end
