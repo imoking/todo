@@ -1,8 +1,12 @@
 <h2>一覧</h2>
 <ul>
     <% @todos.each do |todo| %>
-    <li><%= todo.id %>: <%= link_to(todo.content, "/todos/#{todo.id}/show") %> <br>
-        <%= todo.created_at %>
+    <li>
+        <dl>
+            <dt><%= todo.id %>: <%= link_to(todo.titles, "/todos/#{todo.id}/show") %></dt>
+            <dd><%= todo.created_at %></dd>
+        </dl>
+        
     </li>
     <% end %>
 </ul>

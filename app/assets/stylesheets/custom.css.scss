@@ -50,10 +50,21 @@ a{
 }
 
 .container{
-  @extend .menu-box;
+  padding: 20px;
+  border: 1px solid #ddd;
   margin-left: 2%;
   min-height: 700px;
   flex: 3 1 auto;
+  dl{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    dt{
+      font-weight: bold;
+      font-size: 120%;
+    }
+  }
 }
 
 header{
