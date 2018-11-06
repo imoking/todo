@@ -37,15 +37,18 @@ a{
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   dt{
     width: 20px;
     height: 20px;
     background: #000;
+    flex: 0 1 auto;
   }
   dd{
     font-weight: bold;
+    flex: 5 0 auto;
   }
 }
 
@@ -53,7 +56,7 @@ a{
   @extend .menu-box;
   margin-left: 2%;
   min-height: 700px;
-  flex: 3 1 auto;
+  flex: 5 1 auto;
 }
 
 header{
